@@ -10,6 +10,8 @@ import WhyUs from "./components/WhyUs";
 import ReViews from "./components/Review";
 import PopularLocation from "./components/PopularLocation";
 import Priority from "./components/Priority";
+import FrequentlyQuestion from "./components/FrequentlyQuestion";
+import Footer from "../../components/Footer";
 function HomePage() {
   return (
     <>
@@ -32,6 +34,8 @@ function HomePage() {
           <PopularLocation />
         </div>
         <Priority />
+        <FrequentlyQuestion />
+        <Footer />
       </div>
     </>
   );
