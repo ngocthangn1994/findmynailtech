@@ -9,6 +9,7 @@ import NailTechnician from "./components/NailTechnician";
 import WhyUs from "./components/WhyUs";
 import ReViews from "./components/Review";
 import PopularLocation from "./components/PopularLocation";
+import Priority from "./components/Priority";
 function HomePage() {
   return (
     <>
@@ -30,6 +31,7 @@ function HomePage() {
           <ReViews />
           <PopularLocation />
         </div>
+        <Priority />
       </div>
     </>
   );
