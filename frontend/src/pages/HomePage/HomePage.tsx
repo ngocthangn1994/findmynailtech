@@ -6,6 +6,7 @@ import TopRated from "./components/TopRated";
 import BenefitsBar from "./components/BenefitsBar";
 import HowItWorks from "./components/HowItWorks";
 import NailTechnician from "./components/NailTechnician";
+import WhyUs from "./components/WhyUs";
 function HomePage() {
   return (
     <>
@@ -22,6 +23,7 @@ function HomePage() {
           <HowItWorks />
           <NailTechnician />
         </div>
+        <WhyUs />
       </div>
     </>
   );
