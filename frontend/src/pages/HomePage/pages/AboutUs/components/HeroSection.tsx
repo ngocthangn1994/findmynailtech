@@ -35,7 +35,7 @@ function HeroSection() {
           </p>
         </div>
 
-        <div className="flex mt-5">
+        <div className="flex mt-3">
           <button className="bg-pink-600 text-white rounded px-5 py-2 font-medium">
             Find Nail Techs
           </button>
