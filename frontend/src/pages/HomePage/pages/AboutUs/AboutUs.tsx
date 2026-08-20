@@ -3,6 +3,7 @@ import HeroSection from "./components/HeroSection";
 import StatsSection from "./components/StatsSection";
 import OurStory from "./components/OurStory";
 import OurValues from "./components/OurValues";
+import AboutHighLighSection from "./components/AboutHighLightSection";
 function AboutUs() {
   return (
     <>
@@ -10,9 +11,10 @@ function AboutUs() {
         <Header />
         <HeroSection />
         <StatsSection />
-        <div className="p-10 space-y-5">
+        <div className="p-3 space-y-3">
           <OurStory />
           <OurValues />
+          <AboutHighLighSection />
         </div>
       </div>
     </>
