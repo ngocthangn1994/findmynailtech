@@ -1,10 +1,17 @@
 import HomePage from "./pages/HomePage/HomePage";
+import ForNailTech from "./pages/HomePage/pages/ForNailTech/ForNailTech";
+import { BrowserRouter, Routes, Route } from "react-router";
 function App() {
   return (
     <>
-      <main className="w-full h-full min-h-screen bg-pink-50 px-5 py-1">
-        <HomePage />
-      </main>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+        <Routes>
+          <Route path="/fornailtechs" element={<ForNailTech />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

@@ -1,13 +1,14 @@
 import Logo from "./Logo";
 import { CiLocationOn } from "react-icons/ci";
-
+import { NavLink } from "react-router-dom";
 function Header() {
   const menu = [
-    "Find Nail Techs",
-    "Services",
-    "How It Works",
-    "For Nail Techs",
+    { path: "/", name: "Find Nail Techs" },
+    { path: "/", name: "Services" },
+    { path: "/", name: "How It Works" },
+    { path: "/fornailtechs", name: "For Nail Techs" },
   ];
+
   return (
     <>
       <header>
@@ -16,7 +17,11 @@ function Header() {
           <div className="flex justify-between gap-5">
             {menu.map((item) => (
               <div>
-                <p className="font-medium">{item}</p>
+                <nav>
+                  <NavLink to={item.path} end>
+                    <p className="font-medium">{item.name}</p>
+                  </NavLink>
+                </nav>
               </div>
             ))}
           </div>
