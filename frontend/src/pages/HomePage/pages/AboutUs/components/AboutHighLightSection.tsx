@@ -9,7 +9,6 @@ function AboutHighLighSection() {
     "Salon-quality nails in the comfort of your home",
     "Dedicated support when you need it.",
   ];
-  const avatars = [{ photo: "", name: "Ngoc Nguyen", title: "Founder" }];
   return (
     <>
       <div className="grid grid-cols-2 text-slate-600 gap-5 items-center">

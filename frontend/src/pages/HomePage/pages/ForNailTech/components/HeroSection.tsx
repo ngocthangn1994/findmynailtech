@@ -55,7 +55,7 @@ function HeroSection() {
           <div className="grid grid-cols-4 gap-3 mt-1">
             {items.map((item) => (
               <div className="flex items-center bg-white p-2 rounded gap-2 justify-center px-2 py-5 text-center">
-                <span className="text-pink-600 bg-pink-100 rounded-full w-10 h-10 p-1 items-center flex">
+                <span className="text-pink-600 bg-pink-100 rounded-full w-10 h-10 p-1 items-center flex justify-center">
                   {item.icon}
                 </span>
                 <div>

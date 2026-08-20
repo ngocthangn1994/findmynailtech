@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom";
 function Header() {
   const menu = [
     { path: "/", name: "Find Nail Techs" },
-    { path: "/services", name: "Services" },
     { path: "/howitworks", name: "How It Works" },
     { path: "/fornailtechs", name: "For Nail Techs" },
     { path: "/about", name: "About Us" },
