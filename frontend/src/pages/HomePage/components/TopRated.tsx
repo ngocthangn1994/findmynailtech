@@ -49,7 +49,7 @@ function TopRated() {
               <div className="w-full h-48">
                 <img className="w-full h-full object-cover" src={item.photo} />
               </div>
-              <div className="p-2">
+              <div className="p-2 flex flex-col items-center">
                 <p className="font-bold">{item.name}</p>
                 <div className="grid grid-cols-[0.4fr_1.6fr] gap-3">
                   <div className="flex items-center gap-1">

@@ -1,4 +1,4 @@
-import { FaStar, FaImages, FaMapMarkerAlt } from "react-icons/fa";
+import { FaImages, FaMapMarkerAlt } from "react-icons/fa";
 import { FaComments } from "react-icons/fa6";
 
 function Reviews() {
