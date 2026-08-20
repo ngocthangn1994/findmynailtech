@@ -60,12 +60,11 @@ function HeroSection() {
             View Plans
           </button>
         </div>
-
-        <div className="grid grid-cols-4 gap-3 mt-3">
+        <div className="grid grid-cols-4 gap-2 mt-3">
           {items.map((item, index) => (
             <div
               key={index}
-              className="flex items-center bg-white p-2 rounded gap-2 justify-center px-2 py-5 text-center shadow-sm"
+              className="flex items-center bg-white p-2 rounded gap-2 justify-center px-1 py-3 text-center shadow-sm"
             >
               <span className="text-pink-600 bg-pink-100 rounded-full w-10 h-10 p-1 flex items-center justify-center shrink-0">
                 {item.icon}
