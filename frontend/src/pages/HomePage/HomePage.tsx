@@ -7,6 +7,8 @@ import BenefitsBar from "./components/BenefitsBar";
 import HowItWorks from "./components/HowItWorks";
 import NailTechnician from "./components/NailTechnician";
 import WhyUs from "./components/WhyUs";
+import ReViews from "./components/Review";
+import PopularLocation from "./components/PopularLocation";
 function HomePage() {
   return (
     <>
@@ -24,6 +26,10 @@ function HomePage() {
           <NailTechnician />
         </div>
         <WhyUs />
+        <div className="grid grid-cols-2 p-2 gap-5">
+          <ReViews />
+          <PopularLocation />
+        </div>
       </div>
     </>
   );
