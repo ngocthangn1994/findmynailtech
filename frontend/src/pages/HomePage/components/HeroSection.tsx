@@ -16,7 +16,7 @@ function HeroSection() {
           className="rounded-xl w-full h-full object-contain"
           src={heroSection}
         />
-        <div className="absolute inset-0 p-10 space-y-3">
+        <div className="absolute inset-0 p-10 space-y-1">
           <p className="text-xs text-pink-600 font-medium">
             MOBILE NAIL TECHS NEAR YOU
           </p>
@@ -24,7 +24,7 @@ function HeroSection() {
           <h1 className="text-pink-600 text-6xl  font-bold">
             Delivered to Your Door.
           </h1>
-          <p className="w-lg mt-5 text-slate-600">
+          <p className="w-lg mt-3 text-slate-600">
             Discover trusted mobile nail technicians near you. Compare services,
             reviews and availablity, then book your appoiment in minutes.
           </p>
