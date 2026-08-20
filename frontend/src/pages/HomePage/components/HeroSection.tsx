@@ -1,13 +1,13 @@
 import heroSection from "../../../assets/homepage_herosection.png";
-import { FaShieldAlt } from "react-icons/fa";
+import { RiKakaoTalkFill } from "react-icons/ri";
 import { CiStar } from "react-icons/ci";
-import { CiLock } from "react-icons/ci";
+import { CiBookmarkCheck } from "react-icons/ci";
 
 function HeroSection() {
   const menu = [
-    { icon: <FaShieldAlt />, name: "Verified professionals" },
-    { icon: <CiStar />, name: "Top-rated technicians" },
-    { icon: <CiLock />, name: "Secured booking" },
+    { icon: <CiBookmarkCheck />, name: "No Booking Fees" },
+    { icon: <CiStar />, name: "100% Free To Search" },
+    { icon: <RiKakaoTalkFill />, name: "Contact Techs Directly" },
   ];
   return (
     <>
@@ -20,27 +20,22 @@ function HeroSection() {
           <p className="text-xs text-pink-600 font-medium">
             MOBILE NAIL TECHS NEAR YOU
           </p>
-          <h1 className="text-slate-90 font-bold text-6xl">Beautiful Nails</h1>
-          <h1 className="text-pink-600 text-6xl  font-bold">
-            Delivered to Your Door.
+          <h1 className="text-slate-900 font-bold text-6xl">
+            Find Your Perfect
           </h1>
-          <p className="w-lg mt-3 text-slate-600">
-            Discover trusted mobile nail technicians near you. Compare services,
-            reviews and availablity, then book your appoiment in minutes.
-          </p>
-          <div className="grid grid-cols-2 w-md gap-5 font-medium">
-            <button className="text-white bg-pink-600 rounded p-2">
-              Fail a Nail Tech
-            </button>
-            <button className="text-pink-600 bg-white rounded p-2">
-              How It Works
-            </button>
+          <div className="flex items-center gap-2 text-6xl font-bold">
+            <h1 className="text-pink-600">Nail Tech</h1>
+            <h1 className="text-slate-900">Nearby</h1>
           </div>
+          <p className="w-lg mt-3 text-slate-600">
+            Discover talented, independet nail technicians in your area. View
+            their work and contact them directly
+          </p>
           <div className="flex items-center gap-3">
             {menu.map((item) => (
               <div className="flex items-center gap-1">
                 <span className="text-pink-600">{item.icon}</span>
-                <p>{item.name}</p>
+                <p className="text-sm font-medium">{item.name}</p>
               </div>
             ))}
           </div>

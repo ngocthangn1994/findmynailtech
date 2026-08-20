@@ -1,56 +1,49 @@
-import { FaStar } from "react-icons/fa";
+import { FaStar, FaImages, FaMapMarkerAlt } from "react-icons/fa";
+import { FaComments } from "react-icons/fa6";
 
-function ReViews() {
-  const fiveStars = () => {
-    return (
-      <div className="flex text-pink-600">
-        {Array.from({ length: 5 }).map((_, index) => (
-          <FaStar key={index} />
-        ))}
-      </div>
-    );
-  };
-  const customers = [
+function Reviews() {
+  const benefits = [
     {
-      review:
-        "“Finding a nail tech was so easy. I booked someone near me and she came right to my apartment. My nails look amazing!”",
-      name: "Jessica M.",
-      location: "Houston, TX",
+      icon: <FaMapMarkerAlt />,
+      title: "Find Nail Techs Nearby",
+      description:
+        "Search by ZIP code or city and discover nail technicians near you.",
     },
     {
-      review:
-        "“I love being able to compare prices, photos and reviews before booking. Such a great experience!”",
-      name: "Ashley R.",
-      location: "Houston, TX",
+      icon: <FaImages />,
+      title: "Explore Their Work",
+      description:
+        "Browse portfolio photos, services, experience, ratings, and reviews before choosing.",
     },
     {
-      review:
-        "“Perfect when I don’t have time to drive to a salon. My nail tech is so professional and friendly!”",
-      name: "Maria L.",
-      location: "Sugar Land, TX",
+      icon: <FaComments />,
+      title: "Connect Directly",
+      description:
+        "Contact the nail tech you like to discuss pricing, availability, and appointments.",
     },
   ];
+
   return (
-    <>
-      <div className="space-y-3 bg-white p-5 shadow-sm rounded-xl">
-        <p className="text-pink-600 font-medium">LOVED BY NAIL CLIENTS</p>
-        <div className="grid grid-cols-3 gap-3">
-          {customers.map((item) => (
-            <div className="p-3">
-              <div>
-                {fiveStars()}
-                <p>{item.review}</p>
-                <div className="mt-5">
-                  <p className="font-bold">{item.name}</p>
-                  <p className="text-slate-500">{item.location}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+    <div className="space-y-3 bg-white p-5 shadow-sm rounded-xl">
+      <p className="text-pink-600 font-medium">MADE FOR NAIL CLIENTS</p>
+
+      <p className="font-bold text-2xl">
+        A simpler way to find your next nail tech
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {benefits.map((item, index) => (
+          <div key={index} className="p-5 rounded-xl border border-slate-100">
+            <span className="text-pink-600 text-3xl">{item.icon}</span>
+
+            <p className="font-bold mt-3">{item.title}</p>
+
+            <p className="text-slate-500 mt-2">{item.description}</p>
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 }
 
-export default ReViews;
+export default Reviews;

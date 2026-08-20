@@ -3,7 +3,6 @@ import ForNailTech from "./pages/HomePage/pages/ForNailTech/ForNailTech";
 import { BrowserRouter, Routes, Route } from "react-router";
 import AboutUs from "./pages/HomePage/pages/AboutUs/AboutUs";
 import HowItWorks from "./pages/HomePage/pages/HowItWorks/HowItWorks";
-import Services from "./pages/HomePage/pages/Services/Services";
 function App() {
   return (
     <>
@@ -19,9 +18,6 @@ function App() {
         </Routes>
         <Routes>
           <Route path="/howitworks" element={<HowItWorks />} />
-        </Routes>
-        <Routes>
-          <Route path="/services" element={<Services />} />
         </Routes>
       </BrowserRouter>
     </>

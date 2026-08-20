@@ -6,11 +6,11 @@ import AcrylicFill from "../../../assets/explore_service_photo5.png";
 
 function ExploreServices() {
   const menu = [
-    { photo: AcrylicNails, name: "Acrylic Nails", price: "45" },
-    { photo: GelManicure, name: "Gel Manicure", price: "25" },
-    { photo: GelPedicure, name: "Gel Pedicure", price: "35" },
-    { photo: NailArt, name: "Nail Art", price: "35" },
-    { photo: AcrylicFill, name: "Acrylic Fill", price: "25" },
+    { photo: AcrylicNails, name: "Acrylic Nails" },
+    { photo: GelManicure, name: "Gel Manicure" },
+    { photo: GelPedicure, name: "Gel Pedicure" },
+    { photo: NailArt, name: "Nail Art" },
+    { photo: AcrylicFill, name: "Acrylic Fill" },
   ];
   return (
     <>
@@ -26,7 +26,6 @@ function ExploreServices() {
               </div>
               <div className="text-center p-2">
                 <p className="font-bold">{item.name}</p>
-                <p>From ${item.price}</p>
               </div>
             </div>
           ))}

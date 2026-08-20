@@ -1,6 +1,7 @@
 import Logo from "./Logo";
 import { CiLocationOn } from "react-icons/ci";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+
 function Header() {
   const menu = [
     { path: "/", name: "Find Nail Techs" },
@@ -10,43 +11,54 @@ function Header() {
   ];
 
   return (
-    <>
-      <header>
-        <div className="flex items-center justify-between gap-3">
-          <Logo />
-          <div className="flex justify-between gap-5">
-            {menu.map((item) => (
-              <div>
-                <nav>
-                  <NavLink
-                    to={item.path}
-                    className={({ isActive }) =>
-                      isActive ? "text-pink-600" : "text-slate-90"
-                    }
-                    end
-                  >
-                    <p className="font-medium">{item.name}</p>
-                  </NavLink>
-                </nav>
-              </div>
-            ))}
-          </div>
-          <div className="flex items-center gap-3">
-            <div className="flex items-center gap-1">
-              <CiLocationOn />
-              <p>Houston, TX</p>
-            </div>
-            <button className="font-medium">Log In</button>
-            <button className="font-medium px-2 py-2 text-pink-600 bg-white border border-pink-600 rounded">
-              Sign Up
-            </button>
-            <button className="font-medium rounded px-2 py-2 text-white bg-pink-600">
-              Become a Nail Tech
-            </button>
-          </div>
+    <header className="bg-white py-4">
+      <div className="flex items-center justify-between gap-6">
+        {/* Logo */}
+        <Logo />
+
+        {/* Navigation */}
+        <nav className="flex items-center gap-6">
+          {menu.map((item) => (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              end={item.path === "/"}
+              className={({ isActive }) =>
+                `font-medium transition ${
+                  isActive
+                    ? "text-pink-600"
+                    : "text-slate-700 hover:text-pink-600"
+                }`
+              }
+            >
+              {item.name}
+            </NavLink>
+          ))}
+        </nav>
+
+        {/* Right Side */}
+        <div className="flex items-center gap-4">
+          <button className="flex items-center gap-1 text-slate-700">
+            <CiLocationOn className="text-xl text-pink-600" />
+            <span>Houston, TX</span>
+          </button>
+
+          <Link
+            to="/login"
+            className="font-medium text-slate-700 hover:text-pink-600"
+          >
+            Log In
+          </Link>
+
+          <Link
+            to="/register/nail-tech"
+            className="font-medium px-4 py-2 text-white bg-pink-600 hover:bg-pink-700 rounded-lg"
+          >
+            List Your Profile
+          </Link>
         </div>
-      </header>
-    </>
+      </div>
+    </header>
   );
 }
 

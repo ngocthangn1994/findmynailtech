@@ -1,47 +1,53 @@
 import { MdOutlineSecurity } from "react-icons/md";
-import { TbTruckDelivery } from "react-icons/tb";
-import { CiShoppingTag } from "react-icons/ci";
-import { FaLock } from "react-icons/fa";
+import { FaRegImages, FaRegStar, FaRegComments } from "react-icons/fa";
 
 function BenefitsBar() {
   const menu = [
     {
       icon: <MdOutlineSecurity />,
-      name: "Verified Professionals",
-      description: "Background checked for your safety and peace of mind.",
-    },
-    {
-      icon: <TbTruckDelivery />,
-      name: "Mobile Convenience",
+      name: "Trusted Profiles",
       description:
-        "Your nail tech comes to you at home, work, or whenever you are.",
+        "Browse detailed nail tech profiles with services, experience, and location.",
     },
     {
-      icon: <CiShoppingTag />,
-      name: "Transparent Pricing",
-      description: "See services prices before you book with no hidden fees.",
-    },
-    {
-      icon: <FaLock />,
-      name: "Secure Booking",
+      icon: <FaRegImages />,
+      name: "See Their Work",
       description:
-        "Your payments and personal information are always protected",
+        "Explore real portfolio photos and find a nail tech whose style matches you.",
+    },
+    {
+      icon: <FaRegStar />,
+      name: "Ratings & Reviews",
+      description:
+        "Compare nail technicians using ratings and customer reviews.",
+    },
+    {
+      icon: <FaRegComments />,
+      name: "Contact Directly",
+      description:
+        "Connect with nail technicians directly to discuss pricing and appointments.",
     },
   ];
+
   return (
-    <>
-      <div className="bg-pink-100 p-10 grid grid-cols-4 shadow-sm">
-        {menu.map((item) => (
-          <div className="flex gap-5 items-center">
-            <span className="text-pink-600 text-6xl">{item.icon}</span>
+    <div className="space-y-5">
+      <p className="text-pink-600 font-bold text-center">
+        WHY CHOOSE FINDMYNAILTECH
+      </p>
+
+      <div className="bg-pink-100 p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 shadow-sm">
+        {menu.map((item, index) => (
+          <div key={index} className="flex gap-5 items-center">
+            <span className="text-pink-600 text-5xl shrink-0">{item.icon}</span>
+
             <div>
               <p className="font-bold">{item.name}</p>
-              <p>{item.description}</p>
+              <p className="text-sm text-gray-600 mt-1">{item.description}</p>
             </div>
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

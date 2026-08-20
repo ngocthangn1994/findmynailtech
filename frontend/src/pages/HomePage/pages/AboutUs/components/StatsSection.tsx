@@ -1,50 +1,55 @@
 import { IoIosPeople } from "react-icons/io";
 import { GiFingernail } from "react-icons/gi";
-import { SlCalender } from "react-icons/sl";
-import { CiStar } from "react-icons/ci";
+import { MdPhotoLibrary } from "react-icons/md";
+import { CiLocationOn } from "react-icons/ci";
 
 function StatsSection() {
   const items = [
     {
       icon: <IoIosPeople />,
-      number: "10,000+",
-      tite: "Happy Customer",
-      description: "and growing every day",
+      number: "Free",
+      title: "For Customers",
+      description: "Search nail techs without an account",
+    },
+    {
+      icon: <CiLocationOn />,
+      number: "Nearby",
+      title: "Location Search",
+      description: "Search by ZIP code or city",
+    },
+    {
+      icon: <MdPhotoLibrary />,
+      number: "20",
+      title: "Free Portfolio Photos",
+      description: "Included with every free tech profile",
     },
     {
       icon: <GiFingernail />,
-      number: "2,500+",
-      tite: "Verified Nail Techs",
-      description: "accoss the U.S",
-    },
-    {
-      icon: <SlCalender />,
-      number: "25,000+",
-      tite: "Appoinment Booked",
-      description: "and counting",
-    },
-    {
-      icon: <CiStar />,
-      number: "4.9/5",
-      tite: "Average Rating",
-      description: "from our community",
+      number: "$9.99",
+      title: "Pro Monthly",
+      description: "More tools to grow your profile",
     },
   ];
+
   return (
-    <>
-      <div className="bg-pink-50 rounded shadow-sm">
-        <div className="flex items-center justify-between px-5 p-10">
-          {items.map((item) => (
-            <div className="flex flex-col items-center border-r border-l px-5 border-slate-200 space-y-1">
-              <p className="text-4xl text-pink-600"> {item.icon}</p>
-              <p className="text-2xl font-bold">{item.number}</p>
-              <p className="font-medium">{item.tite}</p>
-              <p>{item.description}</p>
-            </div>
-          ))}
-        </div>
+    <div className="bg-pink-50 rounded shadow-sm">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 p-10">
+        {items.map((item, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center text-center px-5 py-4 border-slate-200 lg:border-r"
+          >
+            <p className="text-4xl text-pink-600">{item.icon}</p>
+
+            <p className="text-2xl font-bold mt-2">{item.number}</p>
+
+            <p className="font-medium">{item.title}</p>
+
+            <p className="text-sm text-slate-500 mt-1">{item.description}</p>
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 }
 
