@@ -4,8 +4,8 @@ import { NavLink } from "react-router-dom";
 function Header() {
   const menu = [
     { path: "/", name: "Find Nail Techs" },
-    { path: "/", name: "Services" },
-    { path: "/", name: "How It Works" },
+    { path: "/services", name: "Services" },
+    { path: "/howitworks", name: "How It Works" },
     { path: "/fornailtechs", name: "For Nail Techs" },
   ];
 
@@ -18,7 +18,13 @@ function Header() {
             {menu.map((item) => (
               <div>
                 <nav>
-                  <NavLink to={item.path} end>
+                  <NavLink
+                    to={item.path}
+                    className={({ isActive }) =>
+                      isActive ? "text-pink-600" : "text-slate-90"
+                    }
+                    end
+                  >
                     <p className="font-medium">{item.name}</p>
                   </NavLink>
                 </nav>
