@@ -36,9 +36,11 @@ function RightSide() {
           </div>
         </div>
         <p className="text-pink-600 font-medium">Forgot password?</p>
-        <button className="text-white w-full p-2 bg-pink-600 ronded">
-          Log In
-        </button>
+        <Link to="/dashboard">
+          <button className="text-white w-full p-2 bg-pink-600 ronded">
+            Log In
+          </button>
+        </Link>
         <p className="text-center text-sm">
           -----------or continue with------------
         </p>
