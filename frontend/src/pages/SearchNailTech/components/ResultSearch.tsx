@@ -6,7 +6,7 @@ import { FaStar } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { TbTruckDelivery } from "react-icons/tb";
 import { SlCalender } from "react-icons/sl";
-
+import { Link } from "react-router-dom";
 function ResultSearch() {
   const result = [
     {
@@ -56,12 +56,15 @@ function ResultSearch() {
         <div className="grid grid-cols-1 space-y-5 mt-5">
           {result.map((item) => (
             <div className="flex items-center gap-5 space-y-2">
-              <div className="w-48 h-48">
-                <img
-                  className="w-full h-full object-cover rounded"
-                  src={item.photo}
-                />
-              </div>
+              <Link to="/profile">
+                <div className="w-48 h-48">
+                  <img
+                    className="w-full h-full object-cover rounded"
+                    src={item.photo}
+                  />
+                </div>
+              </Link>
+
               <div className="space-y-2">
                 <p className="font-bold text-xl text-slate-900">{item.name}</p>
                 <div className="flex gap-3">
@@ -97,9 +100,11 @@ function ResultSearch() {
                   </div>
                 </div>
               </div>
-              <button className="text-pink-600 font-medium border border-pink-600 p-2 rounded">
-                View Profile
-              </button>
+              <Link to="/profile">
+                <button className="text-pink-600 font-medium border border-pink-600 p-2 rounded">
+                  View Profile
+                </button>
+              </Link>
             </div>
           ))}
         </div>
