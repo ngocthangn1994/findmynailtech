@@ -5,7 +5,7 @@ import avatar4 from "../../../assets/avatar4.png";
 import { MdStarRate } from "react-icons/md";
 import { FaMapMarker } from "react-icons/fa";
 import { FaCheckCircle } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 function TopRated() {
   const menu = [
     {
@@ -45,28 +45,33 @@ function TopRated() {
         <p>Highly rated professionals available around Houston.</p>
         <div className="grid grid-cols-4 gap-3">
           {menu.map((item) => (
-            <div className="bg-white rounded">
-              <div className="w-full h-48">
-                <img className="w-full h-full object-cover" src={item.photo} />
-              </div>
-              <div className="p-2 flex flex-col items-center">
-                <p className="font-bold">{item.name}</p>
-                <div className="grid grid-cols-[0.4fr_1.6fr] gap-3">
-                  <div className="flex items-center gap-1">
-                    <MdStarRate className="text-yellow-400" />
-                    <p>{item.star}</p>
+            <Link key={item.name} to="/profile">
+              <div className="bg-white rounded">
+                <div className="w-full h-48">
+                  <img
+                    className="w-full h-full object-cover"
+                    src={item.photo}
+                  />
+                </div>
+                <div className="p-2 flex flex-col items-center">
+                  <p className="font-bold">{item.name}</p>
+                  <div className="grid grid-cols-[0.4fr_1.6fr] gap-3">
+                    <div className="flex items-center gap-1">
+                      <MdStarRate className="text-yellow-400" />
+                      <p>{item.star}</p>
+                    </div>
+                    <div className="flex items-center">
+                      <FaMapMarker />
+                      <p>{item.location} miles</p>
+                    </div>
                   </div>
-                  <div className="flex items-center">
-                    <FaMapMarker />
-                    <p>{item.location} miles</p>
+                  <p className="text-center">{item.service}</p>
+                  <div className="flex items-center gap-3 text-green-600 justify-center">
+                    <FaCheckCircle /> <p>Available</p>
                   </div>
                 </div>
-                <p className="text-center">{item.service}</p>
-                <div className="flex items-center gap-3 text-green-600 justify-center">
-                  <FaCheckCircle /> <p>Available</p>
-                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

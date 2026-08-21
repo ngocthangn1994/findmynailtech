@@ -21,7 +21,7 @@ function App() {
           <Route path="/howitworks" element={<HowItWorks />} />
         </Routes>
         <Routes>
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profiles" element={<Profile />} />
         </Routes>
       </BrowserRouter>
     </>
