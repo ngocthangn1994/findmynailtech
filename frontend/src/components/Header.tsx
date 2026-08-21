@@ -51,7 +51,7 @@ function Header() {
           </Link>
 
           <Link
-            to="/register/nail-tech"
+            to="/profile"
             className="font-medium px-4 py-2 text-white bg-pink-600 hover:bg-pink-700 rounded-lg"
           >
             List Your Profile

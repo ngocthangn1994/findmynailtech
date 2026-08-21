@@ -3,14 +3,16 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { CiLock } from "react-icons/ci";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 function RightSide() {
   return (
     <>
       <div className="w-full h-full p-10 text-slate-600 space-y-5 border border-slate-200">
         <div className="flex items-center gap-3">
           <p>Don't have an account?</p>
-          <p className="text-pink-600 font-medium">Sign up</p>
+          <Link to="/register">
+            <p className="text-pink-600 font-medium">Sign up</p>
+          </Link>
         </div>
         <div className="flex flex-col items-center gap-3">
           <div className="flex items-center gap-3">

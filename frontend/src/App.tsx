@@ -5,6 +5,7 @@ import AboutUs from "./pages/HomePage/pages/AboutUs/AboutUs";
 import Profile from "./pages/Profiles/Profile";
 import HowItWorks from "./pages/HomePage/pages/HowItWorks/HowItWorks";
 import Login from "./pages/Auth/LoginPage/Login";
+import Register from "./pages/Auth/RegisterPage/Register";
 function App() {
   return (
     <>
@@ -26,6 +27,9 @@ function App() {
         </Routes>
         <Routes>
           <Route path="/login" element={<Login />} />
+        </Routes>
+        <Routes>
+          <Route path="/register" element={<Register />} />
         </Routes>
       </BrowserRouter>
     </>
