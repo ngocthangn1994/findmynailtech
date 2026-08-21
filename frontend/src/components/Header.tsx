@@ -1,7 +1,6 @@
 import Logo from "./Logo";
 import { CiLocationOn } from "react-icons/ci";
 import { NavLink, Link } from "react-router-dom";
-
 function Header() {
   const menu = [
     { path: "/", name: "Find Nail Techs" },
@@ -13,8 +12,9 @@ function Header() {
   return (
     <header className="bg-white py-4">
       <div className="flex items-center justify-between gap-6">
-        {/* Logo */}
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
 
         {/* Navigation */}
         <nav className="flex items-center gap-6">
