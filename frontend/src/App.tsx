@@ -6,6 +6,7 @@ import Profile from "./pages/Profiles/Profile";
 import HowItWorks from "./pages/HomePage/pages/HowItWorks/HowItWorks";
 import Login from "./pages/Auth/LoginPage/Login";
 import Register from "./pages/Auth/RegisterPage/Register";
+import SearchNailTech from "./pages/SearchNailTech/SearchNailTech";
 function App() {
   return (
     <>
@@ -30,6 +31,9 @@ function App() {
         </Routes>
         <Routes>
           <Route path="/register" element={<Register />} />
+        </Routes>
+        <Routes>
+          <Route path="/search" element={<SearchNailTech />} />
         </Routes>
       </BrowserRouter>
     </>

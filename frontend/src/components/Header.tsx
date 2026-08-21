@@ -51,10 +51,10 @@ function Header() {
           </Link>
 
           <Link
-            to="/profile"
+            to="/search"
             className="font-medium px-4 py-2 text-white bg-pink-600 hover:bg-pink-700 rounded-lg"
           >
-            List Your Profile
+            Search Now
           </Link>
         </div>
       </div>
