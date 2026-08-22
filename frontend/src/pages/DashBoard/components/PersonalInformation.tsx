@@ -9,7 +9,7 @@ function PersonalInformation() {
   ];
   return (
     <>
-      <div className="p-5 space-y-5 text-slate-600">
+      <div className="p-5 space-y-5 text-slate-600 shadow-sm border border-slate-200 rounded">
         <p className="font-medium">Personal Information</p>
         <div className="grid grid-cols-2">
           <div>
@@ -19,7 +19,7 @@ function PersonalInformation() {
                 src={avatar}
               />
             </div>
-            <div className="w-xs">
+            <div className="w-xs mt-3">
               <p className="font-bold">Profile Photo</p>
               <p className="text-xs">
                 Upload a clear, friendly photo of yourself. JPG, PNG or WEBP,
